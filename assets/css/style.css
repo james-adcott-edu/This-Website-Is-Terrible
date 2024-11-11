@@ -19,6 +19,9 @@ body {
     background: fixed linear-gradient(var(--color-body) , #ffffff);
 }
 
+* {
+    transition: all 0.5s;
+}
 
 #masthead {
     background: var(--color-primary) url('../images/masthead.jpg') no-repeat bottom center/cover;
@@ -266,3 +269,29 @@ body:has(#hidden_options #bad_content:checked) .bad_text {
     display: revert;
 }
 
+/* ALIGNMENT */
+
+body:has(#bad_alignment:checked) .card {
+    background: var(--color-body);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body:has(#bad_alignment:checked) main>div:first-child .card {
+    transform: rotate(-2deg);
+}
+
+body:has(#bad_alignment:checked) main>div:nth-child(3) .card {
+    transform: translate(-30px, -40px) rotate(1deg);
+}
+
+body:has(#bad_alignment:checked) main>div:nth-child(4) .card {
+    transform: translate(-50px, -50px);
+}
+
+body:has(#bad_alignment:checked) main>div:nth-child(5) .card {
+    transform: translate(-40px, -20px) rotate(-1deg);
+}
+
+body:has(#bad_alignment:checked) main>div:nth-child(6) .card {
+    transform: translate(20px, 10px) rotate(-1.5deg);
+}
