@@ -230,3 +230,13 @@ body:has(#hidden_options #bad_colors:checked) {
 #hidden_options:has(#bad_images:checked) ~ * .good_image {
     display: none;
 }
+
+/* FONTS */
+
+body:has(#hidden_options #bad_fonts:checked) {
+    font-family: 'Nova Mono', monospace;
+}
+
+#hidden_options:has(#bad_fonts:checked) ~ * #masthead {
+    font-family: 'Creepster', cursive;
+}
