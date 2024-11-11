@@ -249,3 +249,9 @@ body:has(#hidden_options #bad_fonts:checked) {
     letter-spacing: -.1ch;
     line-height: 1;
 }
+
+/* fix for when non-mono fonts are used */
+#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ footer,
+#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ * .card {
+    word-spacing: -.3ch;
+}
