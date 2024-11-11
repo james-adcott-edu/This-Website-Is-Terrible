@@ -1,2 +1,125 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Fira+Sans:wght@900&family=Nova+Mono&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --border-radius: 16px;
+    --color-body: #64c5cc;
+    --color-primary: rgba(0, 41, 61, 1);
+    --color-primary-ghost: rgba(0, 41, 61, .3);
+    --color-secondary: #1f6831;
+    --color-secondary-hover: #397f46;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    background-color: var(--color-body);
+    background: fixed linear-gradient(var(--color-body) , #ffffff);
+}
+
+
+#masthead {
+    background: var(--color-primary) url('../images/masthead.jpg') no-repeat bottom center/cover;
+    min-height: 500px;
+    color: white;
+    padding: 0 20px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+#masthead h1 {
+    font-size: 6rem;
+}
+
+#masthead p {
+    font-size: 3rem;
+}
+
+nav, footer {
+    background-color: var(--color-primary-ghost);
+    color: white;
+    padding: 0;
+}
+
+nav .container,
+footer .container {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+footer h2 {
+    font-size: 1.2rem;
+    min-height: 4rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+    padding: 0;
+}
+
+main {
+    padding: 2rem 0 3rem 0;
+}
+
+.bad_image {
+    display: none;
+}
+
+
+.card {
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(transparent 10px, #ffffff);
+}
+
+.card-body {
+    background: #fff;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.card-body p {
+    flex-grow: 2;
+}
+
+.cardfoot {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.btn-custom {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: var(--color-secondary-hover);
+    border-color: var(--color-secondary-hover);
+    color: #fff;
+}
