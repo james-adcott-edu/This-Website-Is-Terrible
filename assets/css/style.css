@@ -220,7 +220,7 @@ body:has(#hidden_options #bad_colors:checked) {
 /* IMAGES */
 
 #hidden_options:has(#bad_images:checked) ~ * #masthead {
-    background: var(--color-primary) url('dumpster.jpg') no-repeat bottom center/cover;
+    background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom center/cover;
 }
 
 #hidden_options:has(#bad_images:checked) ~ * .bad_image {
