@@ -255,3 +255,14 @@ body:has(#hidden_options #bad_fonts:checked) {
 #hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ * .card {
     word-spacing: -.3ch;
 }
+
+/* CONTENT */
+
+body:has(#hidden_options #bad_content:checked) .good_text {
+    display: none;
+}
+
+body:has(#hidden_options #bad_content:checked) .bad_text {
+    display: initial;
+}
+
