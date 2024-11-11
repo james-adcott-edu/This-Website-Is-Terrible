@@ -192,14 +192,14 @@ main {
     color: green;
 }
 
-#hidden_options:has(#bad_text_spacing:checked) ~ #options label[for="bad_text_spacing"]>span:after,
-#hidden_options:has(#bad_content:checked) ~ #options label[for="bad_content"]>span:after,
-#hidden_options:has(#bad_alignment:checked) ~ #options label[for="bad_alignment"]>span:after,
-#hidden_options:has(#bad_contrast:checked) ~ #options label[for="bad_contrast"]>span:after,
-#hidden_options:has(#bad_fonts:checked) ~ #options label[for="bad_fonts"]>span:after,
-#hidden_options:has(#bad_links:checked) ~ #options label[for="bad_links"]>span:after,
-#hidden_options:has(#bad_colors:checked) ~ #options label[for="bad_colors"]>span:after,
-#hidden_options:has(#bad_images:checked) ~ #options label[for="bad_images"]>span:after {
+body:has(#bad_text_spacing:checked) #options label[for="bad_text_spacing"]>span:after,
+body:has(#bad_content:checked) #options label[for="bad_content"]>span:after,
+body:has(#bad_alignment:checked) #options label[for="bad_alignment"]>span:after,
+body:has(#bad_contrast:checked) #options label[for="bad_contrast"]>span:after,
+body:has(#bad_fonts:checked) #options label[for="bad_fonts"]>span:after,
+body:has(#bad_links:checked) #options label[for="bad_links"]>span:after,
+body:has(#bad_colors:checked) #options label[for="bad_colors"]>span:after,
+body:has(#bad_images:checked) #options label[for="bad_images"]>span:after {
     content: 'toggle_off';
     color: red;
 }
@@ -219,15 +219,15 @@ body:has(#hidden_options #bad_colors:checked) {
 
 /* IMAGES */
 
-#hidden_options:has(#bad_images:checked) ~ * #masthead {
+body:has(#bad_images:checked) #masthead {
     background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom center/cover;
 }
 
-#hidden_options:has(#bad_images:checked) ~ * .bad_image {
+body:has(#bad_images:checked) .bad_image {
     display: revert;
 }
 
-#hidden_options:has(#bad_images:checked) ~ * .good_image {
+body:has(#bad_images:checked) .good_image {
     display: none;
 }
 
@@ -237,22 +237,22 @@ body:has(#hidden_options #bad_fonts:checked) {
     font-family: 'Nova Mono', monospace;
 }
 
-#hidden_options:has(#bad_fonts:checked) ~ * #masthead {
+body:has(#bad_fonts:checked) #masthead {
     font-family: 'Creepster', cursive;
 }
 
 /* TEXT-SPACING */
 
-#hidden_options:has(#bad_text_spacing:checked) ~ footer,
-#hidden_options:has(#bad_text_spacing:checked) ~ * .card {
+body:has(#bad_text_spacing:checked) footer,
+body:has(#bad_text_spacing:checked) .card {
     word-spacing: -.8ch;
     letter-spacing: -.1ch;
     line-height: 1;
 }
 
 /* fix for when non-mono fonts are used */
-#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ footer,
-#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ * .card {
+body:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) footer,
+body:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) .card {
     word-spacing: -.3ch;
 }
 
