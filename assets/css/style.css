@@ -272,8 +272,11 @@ body:has(#hidden_options #bad_content:checked) .bad_text {
 /* ALIGNMENT */
 
 body:has(#bad_alignment:checked) .card {
-    background: var(--color-body);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body:has(#bad_alignment:checked) .card-img-top {
+    background: linear-gradient(var(--color-body) 10px, #ffffff);
 }
 
 body:has(#bad_alignment:checked) main>div:first-child .card {
