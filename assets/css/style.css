@@ -240,3 +240,12 @@ body:has(#hidden_options #bad_fonts:checked) {
 #hidden_options:has(#bad_fonts:checked) ~ * #masthead {
     font-family: 'Creepster', cursive;
 }
+
+/* TEXT-SPACING */
+
+#hidden_options:has(#bad_text_spacing:checked) ~ footer,
+#hidden_options:has(#bad_text_spacing:checked) ~ * .card {
+    word-spacing: -.8ch;
+    letter-spacing: -.1ch;
+    line-height: 1;
+}
