@@ -70,11 +70,6 @@ main {
     padding: 2rem 0 3rem 0;
 }
 
-.bad_image {
-    display: none;
-}
-
-
 .card {
     height: 100%;
     background-color: transparent;
@@ -122,4 +117,141 @@ main {
     background-color: var(--color-secondary-hover);
     border-color: var(--color-secondary-hover);
     color: #fff;
+}
+
+/* THINGS HIDDEN BY DEFAULT */
+
+#hidden_options,
+.bad_image,
+.bad_text {
+    display: none;
+}
+
+/* MENU TOGGLE */
+
+#options_toggle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #FFF;
+    font-size: 1.5rem;
+    z-index: 1000;
+}
+
+#options_toggle label {
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+#hidden_options:has(#toggle_options_div:checked) ~ #options {
+    display: block;
+}
+
+/* MENU */
+
+#options {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    color: #FFF;
+    padding: 1rem 1rem 56px 56px;
+    max-height: 50vh;
+    overflow-y: auto;
+    z-index: 100;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#options .option {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #444;
+}
+
+#options .option:first-child {
+    border-top: none;
+}
+
+/* TOGGLE ICONS */
+
+#options label>span:after {
+    content: 'toggle_on';
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    color: green;
+}
+
+#hidden_options:has(#bad_text_spacing:checked) ~ #options label[for="bad_text_spacing"]>span:after,
+#hidden_options:has(#bad_content:checked) ~ #options label[for="bad_content"]>span:after,
+#hidden_options:has(#bad_alignment:checked) ~ #options label[for="bad_alignment"]>span:after,
+#hidden_options:has(#bad_contrast:checked) ~ #options label[for="bad_contrast"]>span:after,
+#hidden_options:has(#bad_fonts:checked) ~ #options label[for="bad_fonts"]>span:after,
+#hidden_options:has(#bad_links:checked) ~ #options label[for="bad_links"]>span:after,
+#hidden_options:has(#bad_colors:checked) ~ #options label[for="bad_colors"]>span:after,
+#hidden_options:has(#bad_images:checked) ~ #options label[for="bad_images"]>span:after {
+    content: 'toggle_off';
+    color: red;
+}
+
+/* BAD OPTIONS */
+
+/* COLOURS */
+
+body:has(#hidden_options #bad_colors:checked) {
+        /* horrible background colour for body */
+    background-image: linear-gradient(135deg, #ee00ff 25%, #ffff00 25%, #ffff00 50%, #ee00ff 50%, #ee00ff 75%, #ffff00 75%, #ffff00 100%);
+    background-size: 30.00px 30.00px;
+        /* change page colours */
+    --color-primary: blue;
+    --color-secondary: orange;
+}
+
+/* IMAGES */
+
+#hidden_options:has(#bad_images:checked) ~ * #masthead {
+    background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom center/cover;
+}
+
+#hidden_options:has(#bad_images:checked) ~ * .bad_image {
+    display: initial;
+}
+
+#hidden_options:has(#bad_images:checked) ~ * .good_image {
+    display: none;
+}
+
+/* FONTS */
+
+body:has(#hidden_options #bad_fonts:checked) {
+    font-family: 'Nova Mono', monospace;
+}
+
+#hidden_options:has(#bad_fonts:checked) ~ * #masthead {
+    font-family: 'Creepster', cursive;
+}
+
+/* TEXT-SPACING */
+
+#hidden_options:has(#bad_text_spacing:checked) ~ footer,
+#hidden_options:has(#bad_text_spacing:checked) ~ * .card {
+    word-spacing: -.8ch;
+    letter-spacing: -.1ch;
+    line-height: 1;
+}
+
+/* fix for when non-mono fonts are used */
+#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ footer,
+#hidden_options:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) ~ * .card {
+    word-spacing: -.3ch;
 }
