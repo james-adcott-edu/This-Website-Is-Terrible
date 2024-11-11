@@ -217,6 +217,7 @@ body:has(#hidden_options #bad_colors:checked) {
     background-size: 30.00px 30.00px;
         /* change page colours */
     --color-primary: blue;
+    --color-primary-ghost: transparent;
     --color-secondary: orange;
 }
 
@@ -298,3 +299,10 @@ body:has(#bad_alignment:checked) main>div:nth-child(5) .card {
 body:has(#bad_alignment:checked) main>div:nth-child(6) .card {
     transform: translate(20px, 10px) rotate(-1.5deg);
 }
+
+/*
+#bad_ad {
+    top: 300px;
+    background: yellow;
+}
+*/
