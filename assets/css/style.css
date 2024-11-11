@@ -204,3 +204,15 @@ main {
     color: red;
 }
 
+/* BAD OPTIONS */
+
+body:has(#hidden_options #bad_colors:checked) {
+
+/* horrible background colour for body */
+    background-image: linear-gradient(135deg, #ee00ff 25%, #ffff00 25%, #ffff00 50%, #ee00ff 50%, #ee00ff 75%, #ffff00 75%, #ffff00 100%);
+    background-size: 30.00px 30.00px;
+
+/* change page colours */
+    --color-primary: blue;
+    --color-secondary: orange;
+}
