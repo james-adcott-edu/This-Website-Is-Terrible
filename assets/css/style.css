@@ -58,6 +58,38 @@ footer .container {
     border-radius: var(--border-radius);
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        flex-direction: column;
+    } 
+    nav li {
+        padding: .5rem 0;
+    }
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
 footer h2 {
     font-size: 1.2rem;
     min-height: 4rem;
