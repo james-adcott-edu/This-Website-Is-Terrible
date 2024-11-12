@@ -1,5 +1,7 @@
 # This Website Is Terrible
 
+![This Website Is Terrible](docs/title.webp)
+
 First project for the Code Institute Full Stack Developer course.
 
 A tongue-in-cheek approach to a a mental health awareness website. The user transforms an intentionally bad website into a more positive and helpful one. In much the same way that pressure-washing a dirty patio is a cathartic and enjoyable experience, so too is the process of transforming this website into something better.
@@ -14,11 +16,15 @@ Features include:
 
 Given the stage of the course, I have intentionally avoided the use of Javascript for this so **all interactivity is done through HTML and CSS only**.
 
+[Check out the live site here](https://james-adcott-edu.github.io/This-Website-Is-Terrible/)
+
 ## Key Objectives
 
 - Ultimately produce a visually clean and informative website
 - responsive design at all times, irrespective of user-selected options
 - showcase some advanced CSS techniques
+- demonstrate the use of AI-generated content
+- Avoid the use of Javascript at all costs
 
 ## UX Design
 
@@ -142,3 +148,11 @@ AI was used sparingly for code completion. I found that it could become confused
 ![AI code completion](docs/code_ss.png)
 
 ## Validation
+
+The HTML and CSS have been validated using the W3C validators.
+
+CSS passed with no errors or warnings:
+
+![CSS validation](docs/valid_css.png)
+
+HTML failed based on the use of `popovertarget` on `<button>` elements. I believe this is an error in the validator rather than the code so I am choosing to ignore it -- the whatwg spec itself specifically shows it being used in this way: [see spec here](https://html.spec.whatwg.org/multipage/popover.html)
