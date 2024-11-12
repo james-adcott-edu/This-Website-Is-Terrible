@@ -34,14 +34,15 @@ body {
     font-family: 'Fira Sans', sans-serif;
     font-weight: 900;
     text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    font-size: 1.5rem;
 }
 
 #masthead h1 {
-    font-size: 6rem;
+    font-size: 2em;
 }
 
 #masthead p {
-    font-size: 3rem;
+    font-size: 1em;
 }
 
 nav, footer {
@@ -122,6 +123,15 @@ main {
     color: #fff;
 }
 
+:popover-open {
+    border-radius: 10px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
 .bad_ad {
     background: yellow url('../images/doctor.webp') no-repeat bottom right/cover; 
     background-size: contain;
@@ -174,15 +184,10 @@ main {
 #hidden_options,
 .bad_image,
 .bad_text,
+.bad_link,
 .bad_ad,
 .bad_ad[open]{
     display: none;
-}
-
-@media (min-width: 576px) {
-    #popup_ad {
-        display: none;
-    }
 }
 
 /* MENU TOGGLE */
@@ -280,7 +285,7 @@ body:has(#hidden_options #bad_colors:checked) {
 /* IMAGES */
 
 body:has(#bad_images:checked) #masthead {
-    background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom center/cover;
+    background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom right/cover;
 }
 
 body:has(#bad_images:checked) .bad_image {
@@ -336,26 +341,60 @@ body:has(#bad_alignment:checked) .card-img-top {
     background: linear-gradient(var(--color-body) 10px, #ffffff);
 }
 
-body:has(#bad_alignment:checked) main>div:first-child .card {
+body:has(#bad_alignment:checked) main>div:nth-child(2) .card {
     transform: rotate(-2deg);
 }
 
-body:has(#bad_alignment:checked) main>div:nth-child(3) .card {
+body:has(#bad_alignment:checked) main>div:nth-child(4) .card {
     transform: translate(-30px, -40px) rotate(1deg);
 }
 
-body:has(#bad_alignment:checked) main>div:nth-child(4) .card {
+body:has(#bad_alignment:checked) main>div:nth-child(5) .card {
     transform: translate(-50px, -50px);
 }
 
-body:has(#bad_alignment:checked) main>div:nth-child(5) .card {
+body:has(#bad_alignment:checked) main>div:nth-child(6) .card {
     transform: translate(-40px, -20px) rotate(-1deg);
 }
 
-body:has(#bad_alignment:checked) main>div:nth-child(6) .card {
+body:has(#bad_alignment:checked) main>div:nth-child(7) .card {
     transform: translate(20px, 10px) rotate(-1.5deg);
 }
 
+/* ADS */
+
 body:has(#bad_ads:checked) .bad_ad {
     display: revert;
+}
+
+/* LINKS */
+
+body:has(#bad_links:checked) .bad_link {
+    display: revert;
+}
+
+body:has(#bad_links:checked) .good_link {
+    display: none;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    #masthead {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    #masthead {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 576px) {
+    #popup_ad {
+        display: none;
+    }
 }
