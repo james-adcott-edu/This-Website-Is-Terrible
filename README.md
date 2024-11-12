@@ -1,4 +1,4 @@
-# This-Website-Is-Terrible
+# This Website Is Terrible
 
 First project for the Code Institute Full Stack Developer course.
 
@@ -34,9 +34,17 @@ Given the stage of the course, I have intentionally avoided the use of Javascrip
 
 ### Wireframes
 
-Wireframes were created using Balsamiq and can be found here: TODO
+These have been created using [Balsamiq](https://balsamiq.com/) to define the layout on the "good" version of the page. The "bad" version of the page is a distorted version of the "good" version.
+
+#### Desktop
+![Desktop wireframe](docs/wf_desktop.png) ![Desktop wireframe with options open](docs/wf_desktop_options.png)
+
+#### Mobile
+![Mobile wireframe](docs/wf_mobile.png) ![Mobile wireframe with options open](docs/wf_mobile_options.png)
 
 ## Colours
+
+The following colours were used for the "good" version of the page:
 
 --color-body: #64c5cc;
 --color-primary: rgb(0, 41, 61);
@@ -44,11 +52,23 @@ Wireframes were created using Balsamiq and can be found here: TODO
 --color-secondary: #1f6831;
 --color-secondary-hover: #397f46;
 
+The bad version of the page had colours chosen to be jarring and unpleasant. They do not follow a theme and are not harmonious on purpose.
+
 ## Fonts
 
 For the "good" version of the page, I used the `Roboto` font-family for the body of the page. This is a clean and modern sans-serif font that is easy to read and looks professional. For the masthead of the page I used `Fira Sans` as it provided a nice contrast to the body font.
 
 On the "bad" version of the page, I used `Creepster` for the masthead as it seemed wholly inappropriate given the subject matter. For the body I used a monospace font called `Nova Mono` to make the page harder to read.
+
+## Icons
+
+I opted to use rounded Material Design icons from Google's Material Design Icons library. I prefer these to font awesome as I can specify which icons I want to use and not have to load the entire library, I can apply things like a `font-weight` to them, and also they do not require require an account to use.
+
+These are implemented using font ligatures. For example this displays the menu icon seen at the bottom corner of the page:
+
+```html
+<span class="material-symbols-rounded">menu</span>
+```
 
 ## Imagery
 
@@ -62,6 +82,11 @@ I was banned for the following images:
 
 I also discovered that Dall-E will simply refuse to generate images of meat. Instead it will generate images of fruit or vegetables.
 
+![AI-generated image](docs/meat_fruit.png)
+
+Believe it or not, this image is AI-generated:
+
+![AI-generated image](assets/images/business.webp)
 
 ## Content
 
@@ -111,3 +136,9 @@ body:has(#bad_text_spacing:checked ~ #bad_fonts:not(:checked)) .card {
     word-spacing: -.3ch;
 }
 ```
+
+AI was used sparingly for code completion. I found that it could become confused sometimes:
+
+![AI code completion](docs/code_ss.png)
+
+## Validation
