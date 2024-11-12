@@ -24,7 +24,7 @@ body {
 }
 
 #masthead {
-    background: var(--color-primary) url('../images/masthead.jpg') no-repeat bottom center/cover;
+    background: var(--color-primary) url('../images/masthead.webp') no-repeat bottom center/cover;
     min-height: 500px;
     color: white;
     padding: 0 20px 0 50px;
@@ -317,7 +317,7 @@ body:has(#hidden_options #bad_colors:checked) {
 /* IMAGES */
 
 body:has(#bad_images:checked) #masthead {
-    background: var(--color-primary) url('../images/dumpster.jpg') no-repeat bottom right/cover;
+    background: var(--color-primary) url('../images/dumpster.webp') no-repeat bottom right/cover;
 }
 
 body:has(#bad_images:checked) .bad_image {
