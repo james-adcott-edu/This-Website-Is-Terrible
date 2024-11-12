@@ -122,12 +122,67 @@ main {
     color: #fff;
 }
 
+.bad_ad {
+    background: yellow url('../images/doctor.webp') no-repeat bottom right/cover; 
+    background-size: contain;
+    color: black;
+    padding: 1rem;
+    border: 3px solid;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.bad_ad h1 {
+    font-size: 2em;
+}
+
+.bad_ad span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 2em;
+    color: red;
+    transform: rotate(-20deg);
+}
+
+#popup_ad {
+    top: 300px;
+    min-height: 400px;
+    padding-right: 400px;
+}
+
+#popup_ad #text_content {
+    height: 400px;
+    display: flex;
+    font-size: 2rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#popup_ad button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    border: 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 /* THINGS HIDDEN BY DEFAULT */
 
 #hidden_options,
 .bad_image,
-.bad_text {
+.bad_text,
+.bad_ad,
+.bad_ad[open]{
     display: none;
+}
+
+@media (min-width: 576px) {
+    #popup_ad {
+        display: none;
+    }
 }
 
 /* MENU TOGGLE */
@@ -195,6 +250,7 @@ main {
     color: green;
 }
 
+body:has(#bad_ads:checked) #options label[for="bad_ads"]>span:after,
 body:has(#bad_text_spacing:checked) #options label[for="bad_text_spacing"]>span:after,
 body:has(#bad_content:checked) #options label[for="bad_content"]>span:after,
 body:has(#bad_alignment:checked) #options label[for="bad_alignment"]>span:after,
@@ -300,9 +356,6 @@ body:has(#bad_alignment:checked) main>div:nth-child(6) .card {
     transform: translate(20px, 10px) rotate(-1.5deg);
 }
 
-/*
-#bad_ad {
-    top: 300px;
-    background: yellow;
+body:has(#bad_ads:checked) .bad_ad {
+    display: revert;
 }
-*/
