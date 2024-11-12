@@ -156,3 +156,7 @@ CSS passed with no errors or warnings:
 ![CSS validation](docs/valid_css.png)
 
 HTML failed based on the use of `popovertarget` on `<button>` elements. I believe this is an error in the validator rather than the code so I am choosing to ignore it -- the whatwg spec itself specifically shows it being used in this way: [see spec here](https://html.spec.whatwg.org/multipage/popover.html)
+
+A good lighthouse score would be optimistic given the nature of how the page works in the absence of javascript. Many youtube videos in iframes and hidden images will cause the page to be slow to load and have a poor performance score. However, the page is fully accessible and has a good SEO score.
+
+![Lighthouse score](docs/lighthouse.png)
