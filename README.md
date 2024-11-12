@@ -1,5 +1,7 @@
 # This Website Is Terrible
 
+![This Website Is Terrible](docs/title.webp)
+
 First project for the Code Institute Full Stack Developer course.
 
 A tongue-in-cheek approach to a a mental health awareness website. The user transforms an intentionally bad website into a more positive and helpful one. In much the same way that pressure-washing a dirty patio is a cathartic and enjoyable experience, so too is the process of transforming this website into something better.
