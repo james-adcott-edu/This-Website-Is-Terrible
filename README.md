@@ -40,7 +40,7 @@ These have been created using [Balsamiq](https://balsamiq.com/) to define the la
 ![Desktop wireframe](docs/wf_desktop.png) ![Desktop wireframe with options open](docs/wf_desktop_options.png)
 
 #### Mobile
-![Mobile wireframe](docs/wf_mobile.png) ![Mobile wireframe with options open](docs/wf_mobile_options.png)
+![Mobile wireframe](docs/wf_phone.png) ![Mobile wireframe with options open](docs/wf_phone_options.png)
 
 ## Colours
 
