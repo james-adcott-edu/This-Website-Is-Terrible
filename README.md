@@ -6,7 +6,24 @@ First project for the Code Institute Full Stack Developer course.
 
 A tongue-in-cheek approach to a a mental health awareness website. The user transforms an intentionally bad website into a more positive and helpful one. In much the same way that pressure-washing a dirty patio is a cathartic and enjoyable experience, so too is the process of transforming this website into something better.
 
-Features include:
+So with the intention of creating a purposefully bad website, what sort of things would we absolutely not want to see on a mental health website?
+
+- Intrusive ads, especially those that you would be embarassed to have people see in a coffee shop.
+- Unreadable text
+- Jarring colours
+- Unpleasant imagery
+- Unhelpful advice
+- Poorly designed layout
+- Irrelevant external links
+
+Let's intentionally do all of that!
+
+Also, as if creating two websites in one wasn't enough, I arbitrarily decided to make it a challenge to do this without using any Javascript; It would be much easier, but I wanted to see if it could be done with just HTML and CSS.
+
+**Brace yourself** and [Check out the live site here](https://james-adcott-edu.github.io/This-Website-Is-Terrible/)
+
+## Features
+
 - Swapping out text content
 - Swapping out images
 - Fixing colours
@@ -14,9 +31,7 @@ Features include:
 - adding useful links
 - embedded video in interactive popover modals
 
-Given the stage of the course, I have intentionally avoided the use of Javascript for this so **all interactivity is done through HTML and CSS only**.
-
-[Check out the live site here](https://james-adcott-edu.github.io/This-Website-Is-Terrible/)
+![Options screenshot](docs/ss_options.png)
 
 ## Key Objectives
 
@@ -28,7 +43,7 @@ Given the stage of the course, I have intentionally avoided the use of Javascrip
 
 ## UX Design
 
-### User Stories
+### User Stories (for a good mental health website)
 
 - AS A Site User, I WANT TO navigate easily through the website SO THAT I CAN find the information I need.
 - AS A Site User, I WANT TO understand the goal of the website immediately upon arrival SO THAT I CAN get a visual understanding of its purpose
