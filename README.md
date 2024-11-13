@@ -67,11 +67,13 @@ These have been created using [Balsamiq](https://balsamiq.com/) to define the la
 
 The following colours were used for the "good" version of the page:
 
+```
 --color-body: #64c5cc;
 --color-primary: rgb(0, 41, 61);
 --color-primary-ghost: rgba(0, 41, 61, .3);
 --color-secondary: #1f6831;
 --color-secondary-hover: #397f46;
+```
 
 The bad version of the page had colours chosen to be jarring and unpleasant. They do not follow a theme and are not harmonious on purpose.
 
