@@ -165,7 +165,7 @@ body:has(#bad_images:checked) #options label[for="bad_images"]>span:after {
 }
 ```
 
-Some options depend on the state of current options, for this I used the descendant sibling selector (`~`) within the `:has` pseudo-class. For example, the following code further adjusts the word spacing depending on whether a monospace font is `:not` being used:
+Some options depend on the state of current options, for this I used the subsequent-sibling combinator (`~`) within the `:has` pseudo-class. For example, the following code further adjusts the word spacing depending on whether a monospace font is `:not` being used:
 
 ```css
 /* fix for when non-mono fonts are used */
